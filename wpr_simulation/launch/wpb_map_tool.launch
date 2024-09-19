@@ -1,0 +1,89 @@
+<launch>
+
+  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find wpr_simulation)/worlds/home.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="recording" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+  <!-- Spawn the objects into Gazebo -->
+  <node name="bed" pkg="gazebo_ros" type="spawn_model" args="-file $(find wpr_simulation)/models/bed.model -x -5.2 -y 0.5 -z 0 -Y 0 -urdf -model bed" />
+  <node name="sofa" pkg="gazebo_ros" type="spawn_model" args="-file $(find wpr_simulation)/models/sofa.model -x -3.5 -y -2.1 -z 0 -Y -1.57 -urdf -model sofa" />
+
+
+  <node name="bookshelft" pkg="gazebo_ros" type="spawn_model" args="-file $(find wpr_simulation)/models/bookshelft.model -x 7.1 -y -2.9 -z 0 -Y 1.57 -urdf -model bookshelft" />
+  <node name="cupboard_7" pkg="gazebo_ros" type="spawn_model" args="-file $(find wpr_simulation)/models/cupboard.model -x -1.7 -y -1.8 -z 0 -Y -1.57 -urdf -model cupboard_7" />
+  <node name="cupboard_8" pkg="gazebo_ros" type="spawn_model" args="-file $(find wpr_simulation)/models/cupboard.model -x -2.2 -y -1.8 -z 0 -Y -1.57 -urdf -model cupboard_8" />
+  <node name="cupboard_9" pkg="gazebo_ros" type="spawn_model" args="-file $(find wpr_simulation)/models/cupboard.model -x -2.0 -y 1.5 -z 0 -Y 1.57 -urdf -model cupboard_9" />
+  <node name="cupboard_10" pkg="gazebo_ros" type="spawn_model" args="-file $(find wpr_simulation)/models/cupboard.model -x -1.4 -y 1.5 -z 0 -Y 1.57 -urdf -model cupboard_10" />
+  <node name="cupboard_11" pkg="gazebo_ros" type="spawn_model" args="-file $(find wpr_simulation)/models/cupboard.model -x -0.8 -y 1.5 -z 0 -Y 1.57 -urdf -model cupboard_11" />
+  <node name="cupboard_12" pkg="gazebo_ros" type="spawn_model" args="-file $(find wpr_simulation)/models/cupboard.model -x 5.6 -y -7.2 -z 0 -Y -1.57 -urdf -model cupboard_12" />
+  <node name="cupboard_13" pkg="gazebo_ros" type="spawn_model" args="-file $(find wpr_simulation)/models/cupboard.model -x 5.1 -y -7.2 -z 0 -Y -1.57 -urdf -model cupboard_13" />
+  <node name="cupboard_14" pkg="gazebo_ros" type="spawn_model" args="-file $(find wpr_simulation)/models/cupboard.model -x 7.6 -y -4.8 -z 0 -Y 0 -urdf -model cupboard_14" />
+  <node name="cupboard_15" pkg="gazebo_ros" type="spawn_model" args="-file $(find wpr_simulation)/models/cupboard.model -x 7.6 -y -5.3 -z 0 -Y 0 -urdf -model cupboard_15" />
+  
+  <node name="cupboard_16" pkg="gazebo_ros" type="spawn_model" args="-file $(find wpr_simulation)/models/cupboard.model -x -1.8 -y -4.5 -z 0 -Y 3.14 -urdf -model cupboard_16" />
+  <node name="cupboard_17" pkg="gazebo_ros" type="spawn_model" args="-file $(find wpr_simulation)/models/cupboard.model -x -2.2 -y -4.5 -z 0 -Y 3.14 -urdf -model cupboard_17" />
+  <node name="cupboard_18" pkg="gazebo_ros" type="spawn_model" args="-file $(find wpr_simulation)/models/cupboard.model -x -2.6 -y -4.5 -z 0 -Y 3.14 -urdf -model cupboard_18" />
+  <node name="cupboard_19" pkg="gazebo_ros" type="spawn_model" args="-file $(find wpr_simulation)/models/cupboard.model -x -3.1 -y -4.5 -z 0 -Y 0 -urdf -model cupboard_19" />
+
+
+  
+  <node name="cupboard_0" pkg="gazebo_ros" type="spawn_model" args="-file $(find wpr_simulation)/models/cupboard.model -x 2.5 -y 1.4 -z 0 -Y 1.57 -urdf -model cupboard_0" />
+  <node name="cupboard_1" pkg="gazebo_ros" type="spawn_model" args="-file $(find wpr_simulation)/models/cupboard.model -x 3.0 -y 1.4 -z 0 -Y 1.57 -urdf -model cupboard_1" /> 
+  <node name="cupboard_2" pkg="gazebo_ros" type="spawn_model" args="-file $(find wpr_simulation)/models/cupboard.model -x 3.3 -y -3.4 -z 0 -Y 1.57 -urdf -model cupboard_2" />
+  <node name="cupboard_3" pkg="gazebo_ros" type="spawn_model" args="-file $(find wpr_simulation)/models/cupboard.model -x 3.8 -y -3.4 -z 0 -Y 1.57 -urdf -model cupboard_3" />
+  <node name="bed_1" pkg="gazebo_ros" type="spawn_model" args="-file $(find wpr_simulation)/models/bed.model -x 3.1 -y 0.1 -z 0 -Y 0 -urdf -model bed_1" />
+
+
+  <node name="cupboard_4" pkg="gazebo_ros" type="spawn_model" args="-file $(find wpr_simulation)/models/cupboard.model -x -3.94 -y -4.5 -z 0 -Y 0 -urdf -model cupboard_4" /> 
+  <node name="cupboard_5" pkg="gazebo_ros" type="spawn_model" args="-file $(find wpr_simulation)/models/cupboard.model -x -1.15 -y -4.5 -z 0 -Y 3.14 -urdf -model cupboard_5" />
+  <node name="cupboard_6" pkg="gazebo_ros" type="spawn_model" args="-file $(find wpr_simulation)/models/cupboard.model -x -2.5 -y -5.5 -z 0 -Y 1.57 -urdf -model cupboard_6" />
+
+  <!-- Spawn a robot into Gazebo -->
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find wpr_simulation)/models/wpb_home.model -urdf -x -6.5 -y -6.0 -model wpb_home" />
+
+  <!-- Run the map server -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find wpr_simulation)/maps/map_robotcup.yaml"/>
+
+  <!--- Run AMCL -->
+  <include file="$(find wpb_home_tutorials)/nav_lidar/amcl_omni.launch" />
+
+  <!--- Run move base -->
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base"  output="screen">
+    <rosparam file="$(find wpb_home_tutorials)/nav_lidar/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find wpb_home_tutorials)/nav_lidar/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find wpb_home_tutorials)/nav_lidar/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find wpb_home_tutorials)/nav_lidar/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find wpb_home_tutorials)/nav_lidar/local_planner_params.yaml" command="load" />
+    <param name="base_global_planner" value="global_planner/GlobalPlanner" /> 
+    <param name="use_dijkstra" value="true"/>
+    <param name="base_local_planner" value="wpbh_local_planner/WpbhLocalPlanner" />
+    <param name= "controller_frequency" value="10" type="double"/>
+  </node>
+  <node pkg="waterplus_map_tools" type="wp_edit_node" name="wp_edit_node" output="screen" />
+  <param name="load" type="string" value="/home/bei/catkin_ws/waypoints.xml"/>
+  <!-- Map tools  -->
+  <!-- <node pkg="waterplus_map_tools" type="wp_manager" name="wp_manager" output="screen" />
+  <param name="load" type="string" value="/home/bei/catkin_ws/waypoints.xml"/> -->
+  <!-- Navi server  -->
+  <node pkg="waterplus_map_tools" type="wp_navi_server" name="wp_navi_server" output="screen" />
+
+  <!-- RViz and TF tree -->
+  <arg name="model" default="$(find wpb_home_bringup)/urdf/wpb_home.urdf"/>
+  <arg name="gui" default="false" />
+  <arg name="rvizconfig" default="$(find wpr_simulation)/rviz/editwaypoints.rviz" />
+  <param name="robot_description" command="$(find xacro)/xacro $(arg model)" />
+  <param name="use_gui" value="$(arg gui)"/>
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+    <rosparam command="load" file="$(find wpb_home_bringup)/config/wpb_home.yaml" />
+  </node>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+
+</launch>
